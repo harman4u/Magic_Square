@@ -1,3 +1,9 @@
+/** 
+ 	This program randomly generate a 3X3 matrix and check if the matrix is the
+	magic square. It tests two features:
+ 		* The numbers 1,2,3...9 occur in the matrix.
+ 		* Sum of rows and columns and diagonals equal to each other.
+*/
 
 public class MagicSquare {
 	static int[] rowSumArray = new int[3];
