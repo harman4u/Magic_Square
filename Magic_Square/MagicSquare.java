@@ -1,11 +1,11 @@
+
 /** 
  	This program randomly generate a 3X3 matrix and check if the matrix is the
 	magic square. It tests two features:
  		* The numbers 1,2,3...9 occur in the matrix.
  		* Sum of rows and columns and diagonals equal to each other.
 */
-
-public class MagicSquare {
+public class MagicSquare {	
 	static int[] rowSumArray = new int[3];
 	static int[] columnSumArray = new int[3];
 	static int[] diagonalSumArray = new int[2];
@@ -31,9 +31,9 @@ public class MagicSquare {
 		displayMatrix(squareMatrix);		
 	}	
 	
-	
 	/**
 	 * This method generates a 2D array and assign values to it.
+	 * @return	2D array generated.
 	 */
 	public static int[][] generateMatrix() {
 		int[][] array = new int[3][3];
@@ -52,10 +52,11 @@ public class MagicSquare {
 		}	
 		return array;
 	}
-		
 	
 	/**
 	 * This method checks whether all the numbers from 1-9 are present or not.
+	 * @param array	an array for which numbers have to verified.
+	 * @return	true if all the numbers from 1-9 are present.
 	 */
 	public static boolean checkNumbers(int[][] array) {
 		boolean allPresent = true;
@@ -84,9 +85,9 @@ public class MagicSquare {
 		return allPresent;
 	}
 	
-	
 	/**
 	 * Calculates Sum of Rows, Columns, Diagonal.
+	 * @param array	an array for which sum has to be calculated.
 	 */
 	public static void calculateSums(int[][] array) {
 		primaryDiagonalSum = 0;
@@ -118,9 +119,9 @@ public class MagicSquare {
 		diagonalSumArray[1] = secondaryDiagonalSum;
 	}	
 	
-	
 	/**
 	 * Verifies whether sum of rows and columns is equal or not.
+	 * @return true if sum of rows and columns is equal false otherwise.
 	 */
 	public static boolean checkSums(){	
 		//Checking if all elements of rowSumArray and columnSumArray are equal or not.
@@ -153,9 +154,9 @@ public class MagicSquare {
 		return isSumEqual;
 	}	
 	
-	
 	/**
-	 * Displays 2D Array
+	 * Displays 2D Array 
+	 * @param array an array to display
 	 */
 	public static void displayMatrix(int[][] array) {
 		//These for loops Displays the matrix.
